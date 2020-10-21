@@ -38,6 +38,7 @@ function loadFile(){
             nodeIntegration: true
         },
         frame: false,
+        transparent: true,
         icon: nativeImage.createFromPath(iconPath)
     });
 
@@ -46,7 +47,7 @@ function loadFile(){
         startup.set(true);
     }
 
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
     win.removeMenu();
     win.loadFile(pagePath);
